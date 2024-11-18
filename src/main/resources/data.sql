@@ -1,0 +1,1 @@
+Insert Into student (rollno, name, marks) Values (12, 'Max', 87);
