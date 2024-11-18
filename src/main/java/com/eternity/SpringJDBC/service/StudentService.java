@@ -26,6 +26,11 @@ public class StudentService {
         repo.save(s);
     }
 
+    public void deleteStudent(int r)
+    {
+        repo.remove(r);
+    }
+
     public List<Student> getStd()
     {
         return repo.findAll();

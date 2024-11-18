@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -23,6 +22,13 @@ public class StudentRepo {
         int row = jdbc.update(sql, s.getRollno(), s.getName(), s.getMarks());
 
         System.out.println("Row Effected : "+row);
+    }
+
+    public void remove(int r)
+    {
+        String sql = "Delete From student Where rollno = "+r+";";
+        jdbc.execute(sql);
+        System.out.println("Deleted");
     }
 
     public List<Student> findAll()
